@@ -1,0 +1,14 @@
+<body style="background-color:#FFE7E4;">
+<% if @words.blank? %>
+<h1> There are not any words currently in the system.</h1>
+<% else %>
+<p> These are the current words in the system: </p>
+<ol id="words">
+<% @words.each do |c| %>
+<li><%= c.wordvalue -%></li>
+<% end %>
+</ol>
+<% end %>
+
+
+<p><%= link_to "Enter Words", {:action => 'enterwords' }%></p>

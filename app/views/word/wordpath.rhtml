@@ -1,0 +1,16 @@
+<body style="background-color:#FFE7E4;">
+<h2 style="color:#4D0000;">This is the shortest word path from "<%= @a %>" to "<%= @b %>" :</h2>
+
+<% if @fpath.blank? %>
+<h2 style="color:#800000; text-align:center">Sorry!!</h2>
+<p style="color:#800000; text-align:center">There exist no such path</p>
+<% else %>
+<ol style="color:#800000;">
+<% @fpath.each do |c| %>
+<li><%= c -%></li>
+<% end %>
+</ol>
+<% end %>
+<br><br><br><br><br><br><br><br><br><br><br>
+
+<p style="text-align:center;"><%= link_to "Back", {:action => 'enterwords' }%></p>

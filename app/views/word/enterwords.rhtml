@@ -1,0 +1,15 @@
+<body style="background-color:#FFE7E4;">
+<h3 style="color:#4D0000;"> Please enter two words of equal length:</h3>
+<%= form_tag (:action=> 'wordpath' , :method=> "post") %>
+<p style="color:#800000;"><label for="word_first">First word</label>:
+<%= text_field 'word', 'first' %></p>
+<p style="color:#800000;"><label for="word_second">Second word</label>:
+<%= text_field 'word', 'second' %></p>
+<%= submit_tag "See Wordpath" %>
+<%= end_form_tag %>
+<br><br<br><br><br>
+<b style="color:red;">Note: </b>
+<p style="color:#800000;">The two input fields cannot be left empty. Please fill in the words that are present in our databse.</p>
+<p style="color:#800000;"> To check the list of words available in our database please click the following link</p>
+<p><%= link_to "Check List", {:action => 'list' }%></p>
+<p style="text-align:center;"><%= link_to "Back", {:action => 'index' }%></p>
